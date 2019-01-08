@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>DOM manipulation</title>
+        <script type="text/javascript">
+        function changeStyling()
+        {
+            var para=document.getElementsByTagName("p");
+            para[0].style.fontSize =25;
+            para[1].style.color ="blue";
+            para[2].style.fontWeight ="bold";
+            para[3].style.fontStyle ="italic";
+
+            for(var i=0;i<para.length;i++)
+            {
+                para[i].style.fontSize =25;
+                para[i].style.color ="blue";
+                para[i].style.fontWeight ="bold";
+                para[i].style.fontStyle ="italic";
+
+            }
+        
+                
+        }
+        </script>
+    </head>
+
+    <body>
+        <p>This is Para 1</p>
+        <p>This is Para 2</p>
+        <p>This is Para 3</p>
+        <p>This is Para 4</p>
+      <br>
+        <button onclick="changeStyling()">Click me </button>
+
+
+
+    </body>
+</html>

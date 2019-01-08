@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>jquery Events</title>
+        <link rel="stylesheet" href="C:\Users\Afsana Abida\Desktop\LearningJS\CSS\style.css">
+    </head>
+    <body>
+       
+        <h2>Events jquery</h2>
+        <p>This is para outside div</p>
+        <button id="btn1">Click me</button>
+        <button id="btn2">Click me 2</button>
+        <div id="firstdiv" class="mydivs">
+            <p>1st para 1st div</p>
+            <p>2nd para 2nd div</p>
+        </div>
+
+    <div id="seconddiv" class="mydivs">
+            <p>1st para 2nd div</p>
+           
+        </div>
+
+        <div id="thirddiv" class="mydivs">
+                <ul>
+                    <li>list item 1</li>
+                    <li>list item 2</li>
+                    <li>list item 3</li>
+                    <li>list item 4</li>
+                </ul>
+            </div>
+
+            <div>
+                    <ul>
+                        <li>list item 1</li>
+                        <li>list item 2</li>
+                        <li>list item 3</li>
+                        <li>list item 4</li>
+                    </ul>
+                </div>
+
+            </body>
+
+<script src="C:\Users\Afsana Abida\Desktop\LearningJS\js\jquery.js"></script> 
+    <script>
+        $(document).ready(function(){
+
+        
+           // $("#btn1").dblclick(fn1);
+           $("#btn1").mouseenter(fn1);
+           $("#btn1").mouseleave(fn2);
+           $("#btn1").hover(fn1,fn2);
+        function fn1()
+        {
+           //alert("alert");
+           
+           $("#firstdiv").fadeOut();
+        }
+
+        function fn2()
+        {
+           alert("alert");
+           
+           $("#firstdiv").fadeIn();
+        }
+
+    });
+    </script> 
+</html>

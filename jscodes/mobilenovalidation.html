@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Mobile number validation</title>
+        <script type="text/javascript">
+        /* 
+        \d-any digit [0-9]
+        \w (a-z,A-Z,0-9 & _)
+        \s (spaces and tabs)
+        \t tabs only
+        */
+        
+        function validate()
+        {
+            var text= document.getElementById("text1").value;
+            var regx = /[0-1]\d{9}/;
+            if(regx.test(text))
+            {
+                document.getElementById("lbltext").innerHTML="Valid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="green";
+            }
+        
+            else
+            {
+                document.getElementById("lbltext").innerHTML="Invalid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="red";
+            }
+        }
+
+        </script>
+    </head>
+
+    <body>
+
+        <form>
+            <input id="text1" placeholder="Cellphone"
+            type="text"/><br>
+        <label id="lbltext" style="color: firebrick; visibility: hidden;">Invalid</label>
+        <br>
+        <button onclick="validate()" type="button">Submit</button>
+
+
+        </form>
+    </body>
+</html>

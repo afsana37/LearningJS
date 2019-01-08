@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>DOM manipulation</title>
+        <script type="text/javascript">
+        function fn1()
+        {
+            var rd1=document.getElementById("rd1");
+            var rd2=document.getElementById("rd2");
+            if(rd1.checked==true)
+                alert("The book selected is: "+rd1.value);
+            else if(rd2.checked==true)
+                alert("The book selected is:"+rd2.value);
+            else
+                alert("No book selected");
+
+        
+            alert("Value inside the text box is: " +str);
+      
+        }
+        
+                     
+       </script>
+    </head>
+
+    <body>
+       <input id="rd1" name="grp1" type="radio" value= "The Bear Nightingle">The Bear Nightingle </input><br>
+
+       <input id="rd2" name="grp1" type="radio" value= "The Girl in the Tower">The Girl in the Tower </input><br>
+
+
+
+        <button onclick="fn1()" id="btn1">Click me </button>
+
+    </body>
+</html>

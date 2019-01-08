@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Basic Animation</title>
+        <script type="text/javascript">
+        var opacity = 0;
+        var intervalID=0;
+
+        function fadein()
+        {
+          intervalID=setInterval(show,200);
+        
+                
+        }
+       
+       
+        function fadeout()
+        {
+          intervalID=setInterval(hide,200);
+        
+                
+        }
+
+
+
+        function show()
+        {
+            var img=document.getElementById("img1");
+            opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+            if(opacity<1)
+            {
+                opacity=opacity+0.1
+                img.style.opacity=opacity;
+            }
+            else
+            {
+                clearInterval(intervalID);
+            }
+        }
+
+        function hide()
+        {
+            var img=document.getElementById("img1");
+            opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+            if(opacity>0)
+            {
+                opacity=opacity-0.1
+                img.style.opacity=opacity;
+            }
+            else
+            {
+                clearInterval(intervalID);
+            }
+        }
+        </script>
+    </head>
+
+    <body>
+               
+        <button onclick="fadeout()" id="btnAdd">Fade Out </button>
+        <br>
+        <img id="img1" src="C:\Users\Afsana Abida\Desktop\LearningJS\manhattan1.jpg" width="400px"/>
+        <br>
+        <button onclick="fadein()" id="btnAdd">Fade In </button>
+
+
+
+    </body>
+</html>

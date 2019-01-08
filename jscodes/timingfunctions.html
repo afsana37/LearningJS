@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Timing functions</title>
+        <script type="text/javascript">
+        /* 
+        \d-any digit [0-9]
+        \w (a-z,A-Z,0-9 & _)
+        \s (spaces and tabs)
+        \t tabs only
+        */
+        var ID=0;
+        var seconds=0;
+        
+        function printMsg()
+        {
+            var text= document.getElementById("op").innerHTML=seconds+ " seconds";
+            seconds++;
+           
+        }
+        function start()
+        {
+            ID=window.setInterval(printMsg,1000);
+            //ID=window.setTimeout(printMsg,5000) //set timeout for  msgs you want to print only once
+        }
+
+        function stop()
+        {
+            window.clearInterval(ID);
+        }
+
+        </script>
+    </head>
+
+    <body>
+
+        <button onclick="start()" id="btnAdd">Start</button>
+        <h2 id="op">Some Text</h2>
+        <button onclick="stop()" id="btnStop">Stop</button>
+
+    </body>
+</html>
